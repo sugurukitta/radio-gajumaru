@@ -5,29 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ガジュマルのさんぽ</title>
   <style>
-    /* ===== 基本設定 ===== */
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f4f8f5;
-      color: #2f3e34;
-      line-height: 1.6;
+      background: #f7fbf8;
+      color: #1f2d26;
+      line-height: 1.7;
     }
 
     h1, h2, h3 {
-      margin: 0 0 10px;
+      margin: 0;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 100px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    /* ===== フェードイン ===== */
+    header {
+      background: linear-gradient(135deg, #0f2f24, #2e7d5a);
+      color: white;
+      padding: 140px 20px 120px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2em;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.3em;
+      opacity: 0.9;
+    }
+
     .fade {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
       animation: fadeIn 1s forwards;
     }
 
@@ -38,93 +53,111 @@
       }
     }
 
-    /* ===== ヘッダー ===== */
-    header {
-      background: linear-gradient(135deg, #1f4d3a, #4caf7d);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
+    h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
     }
 
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-
-    /* ===== カード ===== */
     .card-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
-    /* ===== 音声プレイヤー ===== */
     .audio-box {
-      background: #e6f2ea;
-      padding: 20px;
-      border-radius: 16px;
+      background: linear-gradient(135deg, #e6f5ec, #f3faf6);
+      padding: 40px;
+      border-radius: 20px;
       text-align: center;
     }
 
-    /* ===== フッター ===== */
     footer {
-      background: #1f4d3a;
+      background: #0f2f24;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      margin-top: 60px;
     }
 
     a {
-      color: #4caf7d;
+      color: #2e7d5a;
       text-decoration: none;
     }
 
-    /* ===== スマホ対応 ===== */
+    /* ===== メンバー ===== */
+    .member {
+      text-align: center;
+    }
+
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+      }
+
+      section {
+        padding: 70px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== トップ ===== -->
+  <!-- ヒーロー -->
   <header>
     <h1>ガジュマルのさんぽ</h1>
     <p>再エネの視点で、日常の見え方が変わる。</p>
   </header>
 
-  <!-- ===== 番組紹介 ===== -->
+  <!-- 番組紹介 -->
   <section class="fade">
     <h2>番組について</h2>
     <p>
       再エネを作る仕事をしている私たちが、日常のそばにある、実はまだよく知らない世界を探求する番組です。
     </p>
-    <p>
-      再エネをつくる仕事をしている私たちが、日常のすぐそばにある、まだよく知られていない世界を探求するラジオ。
-      身近なテーマを、少し違った視点から掘り下げる知的で落ち着いた雰囲気でお届けします。
-    </p>
   </section>
 
-  <!-- ===== エピソード一覧 ===== -->
+  <!-- メンバー紹介 -->
+  <section class="fade">
+    <h2>メンバー</h2>
+    <div class="card-container">
+
+      <div class="card member">
+        <img src="https://via.placeholder.com/100" alt="メンバー">
+        <h3>メンバーA</h3>
+        <p>再エネ企業で働くエンジニア。自然とテクノロジーの両方が好き。</p>
+      </div>
+
+      <div class="card member">
+        <img src="https://via.placeholder.com/100" alt="メンバー">
+        <h3>メンバーB</h3>
+        <p>環境問題に関心があり、生き物や自然について日々学んでいる。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- エピソード -->
   <section class="fade">
     <h2>エピソード</h2>
     <div class="card-container">
@@ -147,25 +180,24 @@
     </div>
   </section>
 
-  <!-- ===== 音声プレイヤー ===== -->
+  <!-- 音声 -->
   <section class="fade">
     <h2>最新エピソード</h2>
     <div class="audio-box">
-      <p>ここにSpotifyや音声プレイヤーを埋め込みます</p>
-      <!-- 例：iframe貼る -->
+      <p>ここにSpotifyの埋め込みを追加</p>
     </div>
   </section>
 
-  <!-- ===== SNS ===== -->
+  <!-- SNS -->
   <section class="fade">
     <h2>SNS</h2>
     <p>
-      <a href="#">Twitter</a> /
+      <a href="#">Twitter</a>
       <a href="#">Instagram</a>
     </p>
   </section>
 
-  <!-- ===== フッター ===== -->
+  <!-- フッター -->
   <footer>
     <p>© ガジュマルのさんぽ</p>
   </footer>
